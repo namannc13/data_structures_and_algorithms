@@ -1,6 +1,8 @@
 import java.util.LinkedList;
 import java.util.Queue;
 
+// BFS: We need to approach towards the neighbouring nodes simultaneously
+
 // TC: O(N*M) (checking rotten oranges) + O(4*N*M) (queue worst case + 4 operations per element in q) => O(N*M)
 // SC: O(N*M) (queue worst case) + O(N*M) (vis[][] array) => O(N*M)
 

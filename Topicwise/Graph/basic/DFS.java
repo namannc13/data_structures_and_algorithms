@@ -1,4 +1,4 @@
-package Topicwise.Graph.basic;
+package Topicwise.Graph.Basic;
 
 import java.util.ArrayList;
 
