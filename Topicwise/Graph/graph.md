@@ -1,6 +1,7 @@
 # When to Use Graphs
 
 ## On Matrices
+
 Graphs can be used to represent matrices for tasks that involve connectivity, traversal, or mapping relationships between cells or elements.
 
 ---
@@ -23,3 +24,6 @@ Graphs can be used to represent matrices for tasks that involve connectivity, tr
 2. **Depth-Based Traversal:**
    - Use DFS when you need to explore paths or traverse as deeply as possible before backtracking.
 
+# Tips
+
+1. **In case of matrix, We often need to find the starting point in many questions from where we will start the DFS or BFS**
