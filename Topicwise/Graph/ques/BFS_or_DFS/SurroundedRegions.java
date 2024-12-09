@@ -1,3 +1,4 @@
+package BFS_or_DFS;
 import java.util.Arrays;
 
 // TC: O(2*N + 2*M) (traverse boundaries) + O(4(N*M)) (worst case dfs traversal, each element in matrix plus 4 operations) + O(N*M) (after dfs traversal to find whether any '0' in matrix are unvisited) => O(N*M)

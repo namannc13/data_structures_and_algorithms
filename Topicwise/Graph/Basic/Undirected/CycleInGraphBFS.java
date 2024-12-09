@@ -1,4 +1,4 @@
-package Topicwise.Graph.Basic;
+package Topicwise.Graph.Basic.Undirected;
 
 import java.util.ArrayList;
 import java.util.LinkedList;

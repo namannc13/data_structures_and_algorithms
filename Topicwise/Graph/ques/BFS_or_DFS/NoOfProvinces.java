@@ -1,4 +1,4 @@
-package BFS_or_DFS.InvolvingAdjMatrix;
+package BFS_or_DFS;
 
 import java.util.ArrayList;
 

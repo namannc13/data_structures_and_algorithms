@@ -1,3 +1,4 @@
+package BFS_or_DFS;
 
 // TC: O(M*N) (iteration through all cells + dfs visits each cell once)
 // SC: O(M*N) (for the visited array + recursion stack)
