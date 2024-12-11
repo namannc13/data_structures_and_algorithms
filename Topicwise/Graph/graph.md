@@ -26,4 +26,13 @@ Graphs can be used to represent matrices for tasks that involve connectivity, tr
 
 # Tips
 
-1. **In case of matrix, We often need to find the starting point in many questions from where we will start the DFS or BFS**
+1. **In case of matrix, We often need to find the starting point ( could be many ) in many questions from where we will start the DFS or BFS**
+
+# Bipartite Graph
+
+- **Adjacent nodes will not have the same colors**
+
+# Topological Sort - Only for DAG
+
+- A sorting where if there is an edge from A to B, A will appear before B in sorting
+- Only applicable to Directed Acyclic Graphs
