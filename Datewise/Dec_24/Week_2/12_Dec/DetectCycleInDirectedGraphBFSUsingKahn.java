@@ -3,10 +3,11 @@ import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.Queue;
 
+// Same as Kahns Algo / Using Kahns Algo
 // TC: O( V + E ) ( directed graph bfs ) + O ( V + E ) ( filling the indegree array )
 // SC: O(V) (indegree[] array) + O(V) (queue) + O(V) (list) => O(V)
 
-public class KahnsAlgorithm {
+public class DetectCycleInDirectedGraphBFSUsingKahn {
     public static void main(String[] args) {
         int V = 6;
         ArrayList<ArrayList<Integer>> adj = new ArrayList<>();
@@ -17,6 +18,7 @@ public class KahnsAlgorithm {
 
         adj.get(2).add(3);
         adj.get(3).add(1);
+        // adj.get(1).add(2);
         adj.get(4).add(0);
         adj.get(4).add(1);
         adj.get(5).add(0);
@@ -41,6 +43,7 @@ public class KahnsAlgorithm {
         System.out.println();
         System.out.println(list);
         System.out.println();
+        System.out.println(list.size() == V);
     }
 
     public static void bfs(ArrayList<ArrayList<Integer>> adj, int[] indegree, ArrayList<Integer> list, Queue<Integer> q){
