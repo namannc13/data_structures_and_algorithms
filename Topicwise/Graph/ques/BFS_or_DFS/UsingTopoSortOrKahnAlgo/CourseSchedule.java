@@ -1,4 +1,4 @@
-package BFS_or_DFS;
+package BFS_or_DFS.UsingTopoSortOrKahnAlgo;
 
 import java.util.ArrayList;
 

@@ -1,10 +1,11 @@
-package BFS_or_DFS;
+package BFS_or_DFS.UsingTopoSortOrKahnAlgo;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.LinkedList;
 import java.util.Queue;
 
+// Same as Kahn Algo / Using Kahn Algo
 // TC: O( V + E ) ( directed graph bfs ) + O ( V + E ) ( filling the indegree array ) + O( V + E ) (filling the newGraph)
 // SC: O(V) (indegree[] array) + O(V) (queue) + O(V) (list) O(V + E) (newGraph) => O(V)
 
