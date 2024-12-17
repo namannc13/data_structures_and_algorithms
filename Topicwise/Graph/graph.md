@@ -68,3 +68,10 @@ Graphs can be used to represent matrices for tasks that involve connectivity, tr
 
 **Cycle detection or level-order processing → Kahn's Algorithm.**\
 **Just need one valid order or SCC → DFS.**
+
+# Djikstra's Algorithm
+
+### **Important Points to remember:**
+
+- Used for finding Shortest Paths
+- Any graph with negative weights cannot implement Djikstra's Algorithm
