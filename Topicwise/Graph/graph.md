@@ -53,8 +53,9 @@ Graphs can be used to represent matrices for tasks that involve connectivity, tr
 ### Use **Kahn's Algorithm (BFS)** when:
 
 - Detecting cycles in a directed graph.
+- Finding one valid topological order.
 - Counting valid topological orders.
-- Solving task scheduling or prerequisite problems.
+- If the graph is cyclic, Kahn can be used to get the nodes which are not involved in the cycle.
 - Breadth-first traversal is required.
 
 ### Use **DFS-based Topological Sort** when:
@@ -73,5 +74,6 @@ Graphs can be used to represent matrices for tasks that involve connectivity, tr
 
 ### **Important Points to remember:**
 
-- Used for finding Shortest Paths
+- It Used for finding Shortest Paths
+- It Used for printing Shortest Paths
 - Any graph with negative weights cannot implement Djikstra's Algorithm

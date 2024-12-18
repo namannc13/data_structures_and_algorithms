@@ -2,9 +2,14 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.PriorityQueue;
 
-// Same as BFS
-// TC: O(N) ( all nodes ) + O(2E) ( the inner for loop will run for all the node's neighbours => total degree => 2*Edges )
-// SC: O(V) ( bfs + vis[] arr + pq + dist)
+// TC: TC: E(log V) 
+// ( O(V) pq while loop * ( log(heap) (pop()) + O(V-1) (inner loop worst case) + log(heap) (push()) )
+// O(V) * ( log(heap)(1 + V - 1)
+// V * log(heap)(v)
+// V^2 * log(V^2)  (worst case log(heap)) ( pq will add V-1 nodes continuously till the end )
+// V^2 * 2 log(V)
+// V^2 * log(V) => E(log(V)) ( I don't know how V^2 == E)
+// SC: O(V) ( bfs + pq + dist)
 
 public class DjikstrasAlgorithmUsingPq {
     public static class Pair {
@@ -51,23 +56,21 @@ public class DjikstrasAlgorithmUsingPq {
         int[] dist = new int[V];
         Arrays.fill(dist, Integer.MAX_VALUE);
         dist[srcNode] = 0;
-        boolean[] vis = new boolean[V];
-        vis[srcNode] = true;
-        bfs(minHeap, adj, dist, vis);
+        bfs(minHeap, adj, dist);
 
         System.out.println();
         System.out.println(Arrays.toString(dist));
         System.out.println();
     }
 
-    public static void bfs(PriorityQueue<Pair> q, ArrayList<ArrayList<Pair>> adj, int[] dist, boolean[] vis) {
+    public static void bfs(PriorityQueue<Pair> q, ArrayList<ArrayList<Pair>> adj, int[] dist) {
         while (!q.isEmpty()) {
             Pair p = q.poll();
             for (Pair p2 : adj.get(p.a)) {
-                if (!vis[p2.a])
+                if (dist[p2.a] > p.b + p2.b) {
+                    dist[p2.a] = p.b + p2.b;
                     q.add(new Pair(p2.a, p.b + p2.b));
-                dist[p2.a] = Math.min(dist[p2.a], p.b + p2.b);
-                vis[p2.a] = true;
+                }
             }
         }
     }

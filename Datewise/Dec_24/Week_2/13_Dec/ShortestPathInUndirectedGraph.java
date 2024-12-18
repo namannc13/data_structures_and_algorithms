@@ -5,7 +5,7 @@ import java.util.Queue;
 
 // Same as BFS
 // TC: O(N) ( all nodes ) + O(2E) ( the inner for loop will run for all the node's neighbours => total degree => 2*Edges )
-// SC: O(V) ( bfs + vis[] arr + queue + dist)
+// SC: O(V) ( bfs + queue + dist)
 
 public class ShortestPathInUndirectedGraph {
     public static class Pair {
@@ -43,22 +43,21 @@ public class ShortestPathInUndirectedGraph {
         int[] dist = new int[V];
         Arrays.fill(dist, Integer.MAX_VALUE);
         dist[0] = 0;
-        boolean[] vis = new boolean[V];
-        bfs(q, list, dist, vis);
+        bfs(q, list, dist);
 
         System.out.println();
         System.out.println(Arrays.toString(dist));
         System.out.println();
     }
 
-    public static void bfs(Queue<Pair> q, ArrayList<ArrayList<Integer>> adj, int[] dist, boolean[] vis) {
+    public static void bfs(Queue<Pair> q, ArrayList<ArrayList<Integer>> adj, int[] dist) {
         while (!q.isEmpty()) {
             Pair p = q.poll();
             for (Integer it : adj.get(p.a)) {
-                if (!vis[it])
+                if (dist[it] > p.b + 1) {
                     q.add(new Pair(it, p.b + 1));
-                dist[it] = Math.min(dist[it], p.b + 1);
-                vis[it] = true;
+                    dist[it] = p.b + 1;
+                }
             }
         }
     }
