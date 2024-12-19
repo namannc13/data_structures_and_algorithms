@@ -74,6 +74,17 @@ Graphs can be used to represent matrices for tasks that involve connectivity, tr
 
 ### **Important Points to remember:**
 
-- It Used for finding Shortest Paths
-- It Used for printing Shortest Paths
-- Any graph with negative weights cannot implement Djikstra's Algorithm
+- **Keywords:** Shortest path, Path with Minimum/Maximum steps/weight/efforts etc.
+
+- It is Used for finding and printing Shortest Paths.
+
+- When the Source and Destination is given
+
+- Any graph with negative weights cannot implement Djikstra's Algorithm.
+
+### **V.Imp Point**
+
+- Keep in mind the **Sorting Criteria for Priority Queue**:
+  1. Use the **Main Constraint** as the priority:
+     - Example: For "Cheapest Flights Within K Stops," prioritize **steps** over **cost** since the solution must satisfy the "at most K steps" condition.
+  2. If the data is already sorted (e.g., steps), a normal queue may suffice, and a priority queue isn't needed.
