@@ -88,3 +88,26 @@ Graphs can be used to represent matrices for tasks that involve connectivity, tr
   1. Use the **Main Constraint** as the priority:
      - Example: For "Cheapest Flights Within K Stops," prioritize **steps** over **cost** since the solution must satisfy the "at most K steps" condition.
   2. If the data is already sorted (e.g., steps), a normal queue may suffice, and a priority queue isn't needed.
+
+### **Tips**
+
+- If we are using a normal Queue and know that every entry is going to be in a sorted order in the Queue, we can end the loop when we get the answer 
+
+  ```java
+  if(p.node == end) return;
+  ```
+
+### **Issues Faced**
+
+- `In Some Questions dist[]` Misinterpretation:
+  - `dist[]` is supposed to keep track of the minimum steps required to reach a specific node (value). However, the BFS implementation does not always guarantee this property because of the presence of a third variable.
+  - A state with fewer steps (`dist[node]`) might actually require more `( third variable value )`, so simply comparing steps is insufficient.
+
+### Solutions
+
+- When the above issue arises:
+  - Remove If condition ( check if dist\[node\] already has a lower value ) and traverse through all possibilities
+  - Remove dist\[\] array if it is only storing something which increments by constant value like 'steps' and just return 'steps' when the target is found
+  - Lose Hope and move on with the day ig
+  - Don't use Graph when a third parameter is there
+- When in the bfs algorithm , in the for loop when we perform operations or take neighbourhood nodes , if we encounter a variable value which can be used only a limited amount of times, Don't use Graph ( Example: **Minimum Moves to Reach Target Score** )
