@@ -78,7 +78,9 @@ Graphs can be used to represent matrices for tasks that involve connectivity, tr
 
 - It is Used for finding and printing Shortest Paths.
 
-- When the Source and Destination is given
+- When the Source and Destination is given.
+
+- Djikstra's work on Directed Cyclic Graph and Undirected Cyclic Graph.
 
 - Any graph with negative weights cannot implement Djikstra's Algorithm.
 
@@ -91,7 +93,7 @@ Graphs can be used to represent matrices for tasks that involve connectivity, tr
 
 ### **Tips**
 
-- If we are using a normal Queue and know that every entry is going to be in a sorted order in the Queue, we can end the loop when we get the answer 
+- If we are using a normal Queue and know that every entry is going to be in a sorted order in the Queue, we can end the loop when we get the answer
 
   ```java
   if(p.node == end) return;
@@ -111,3 +113,13 @@ Graphs can be used to represent matrices for tasks that involve connectivity, tr
   - Lose Hope and move on with the day ig
   - Don't use Graph when a third parameter is there
 - When in the bfs algorithm , in the for loop when we perform operations or take neighbourhood nodes , if we encounter a variable value which can be used only a limited amount of times, Don't use Graph ( Example: **Minimum Moves to Reach Target Score** )
+
+# Bellman Ford Algorithm
+
+- Only works on **Directed Graphs ( Make Undirected Graphs Directed )**
+- Works on **Negative Edge Weights** Unlike Djikstra's and Detects **Negative Cycles**.
+
+# Floyd Warshall Algorithm
+
+- Only works on **Directed Graphs ( Make Undirected Graphs Directed )**
+- Works on **Negative Edge Weights** Unlike Djikstra's and Detects **Negative Cycles**.
