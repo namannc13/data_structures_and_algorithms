@@ -118,8 +118,10 @@ Graphs can be used to represent matrices for tasks that involve connectivity, tr
 
 - Only works on **Directed Graphs ( Make Undirected Graphs Directed )**
 - Works on **Negative Edge Weights** Unlike Djikstra's and Detects **Negative Cycles**.
+- Needs a Source Node from where we will calculate the Shortest Distance.
 
 # Floyd Warshall Algorithm
 
 - Only works on **Directed Graphs ( Make Undirected Graphs Directed )**
 - Works on **Negative Edge Weights** Unlike Djikstra's and Detects **Negative Cycles**.
+- Calculates the Shortest Distance from Each node to Every node.
