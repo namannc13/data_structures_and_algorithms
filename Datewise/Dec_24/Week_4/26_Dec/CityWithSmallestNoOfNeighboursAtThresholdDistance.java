@@ -3,7 +3,7 @@
 // TC: O(V^3)
 // SC: O(V^2)
 
-public class CityWithSmallestNoOfNeighboursAtThresholdDistance {
+class CityWithSmallestNoOfNeighboursAtThresholdDistance {
     public static void main(String[] args) {
         int[][] edges = { { 0, 1, 3 }, { 1, 2, 1 }, { 1, 3, 4 }, { 2, 3, 1 } };
         int n = 4;

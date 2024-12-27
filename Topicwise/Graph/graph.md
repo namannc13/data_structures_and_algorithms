@@ -125,3 +125,16 @@ Graphs can be used to represent matrices for tasks that involve connectivity, tr
 - Only works on **Directed Graphs ( Make Undirected Graphs Directed )**
 - Works on **Negative Edge Weights** Unlike Djikstra's and Detects **Negative Cycles**.
 - Calculates the Shortest Distance from Each node to Every node.
+
+### **CASE** - When we need to hold the operation of removing a node from a list or set or wait for the current level to end so that it can be considered in other paths, we can:
+
+- Wait for the Same level to end and then mark them visited or delete them ( depends on the problem )
+- Do not remove it till it is the node that comes out of the queue
+- Example - PrimsAlgorithm ( We wait and do not mark the nodes as visited till they are the one which appears when polling a queue )
+
+# Prim's Algorithm
+
+- Used to create **Spanning Trees**.
+
+
+- Almost Djikstras Algorithm is used **except** ( Weight added to queue every iteration is not the combined weight but the individual weight & the node is marked visited only after it itself is polled from queue and not when we add it to the queue so that every node at the same level can take it in it's path ).
