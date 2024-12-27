@@ -1,4 +1,4 @@
-package Topicwise.Graph.Basic.Undirected;
+package Topicwise.Graph.DetectCycle.Undirected;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
