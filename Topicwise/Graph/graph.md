@@ -136,4 +136,15 @@ Graphs can be used to represent matrices for tasks that involve connectivity, tr
 
 - Used to create **Spanning Trees**.
 
-- Almost Djikstras Algorithm is used **except** ( Weight added to queue every iteration is not the combined weight but the individual weight & the node is marked visited only after it itself is polled from queue and not when we add it to the queue so that every node at the same level can take it in it's path )...
+- Almost Djikstras Algorithm is used **except** ( Weight added to queue every iteration is not the combined weight but the individual weight & the node is marked visited only after it itself is polled from queue and not when we add it to the queue so that every node at the same level can take it in it's path ).
+
+# Disjoint Union Set
+
+- Two Methods: 
+  - Union by Size ( better )
+  - Union by Rank
+- Used in order to find the ultimate Parent of any node ( helpful in questions like No of Provinces, Minimum Spanning trees, etc )
+
+# Kruskal's Algorithm
+
+- Utilises Disjoint Union Set to find the Minimum Spanning Tree
