@@ -140,10 +140,11 @@ Graphs can be used to represent matrices for tasks that involve connectivity, tr
 
 # Disjoint Union Set
 
-- Two Methods: 
+- Two Methods:
   - Union by Size ( better )
   - Union by Rank
-- Used in order to find the ultimate Parent of any node ( helpful in questions like No of Provinces, Minimum Spanning trees, etc )
+- Used in order to find the **Ultimate Parent of any node**, **Number of components**, **Extra number of edges in a graph** ( helpful in questions like No of Provinces, Minimum Spanning trees, No of operations to make network connected etc )
+- If any problem is related to **Connecting** or **Merging**, DSU is used
 
 # Kruskal's Algorithm
 
