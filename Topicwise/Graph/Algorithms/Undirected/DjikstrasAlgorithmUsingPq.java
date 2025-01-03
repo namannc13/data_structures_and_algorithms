@@ -8,7 +8,7 @@ import java.util.PriorityQueue;
 // V * log(heap)(v)
 // V^2 * log(V^2)  (worst case log(heap)) ( pq will add V-1 nodes continuously till the end )
 // V^2 * 2 log(V)
-// V^2 * log(V) => E(log(V)) ( I don't know how V^2 == E)
+// V^2 * log(V) => E(log(V)) ( I don't know how V^2 == E) ( update = ok in undirected graph it makes sense that V^2 = E )
 // SC: O(V) ( bfs + pq + dist)
 
 public class DjikstrasAlgorithmUsingPq {
