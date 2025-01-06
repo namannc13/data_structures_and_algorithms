@@ -144,8 +144,16 @@ Graphs can be used to represent matrices for tasks that involve connectivity, tr
   - Union by Size ( better )
   - Union by Rank
 - Used in order to find the **Ultimate Parent of any node**, **Number of components**, **Extra number of edges in a graph** ( helpful in questions like No of Provinces, Minimum Spanning trees, No of operations to make network connected etc )
-- If any problem is related to **Connecting** or **Merging**, DSU is used
+- If any problem is related to **Connecting** or **Merging on the go ( dynamic graph )**, DSU is used
+- If **Islands or Components** are mentioned ( Number of Islands 2, Making a large Island )
+- If **Connecting of nodes** is needed, we use DSU instead of traversal techniques
+- In DSU problems if connection is needed, we can **treat each row and col as a node** and use it in DSU to get the desired answer ( Look into **Most Stones Removed with same row or col** as reference )
 
 # Kruskal's Algorithm
 
 - Utilises Disjoint Union Set to find the Minimum Spanning Tree
+
+# Kosaraju's Algorithm or Strongly Connected Components
+
+- Only for **Directed Graphs**
+- Every **pair should be reachable** in a strongly connected component
