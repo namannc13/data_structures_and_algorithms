@@ -157,3 +157,8 @@ Graphs can be used to represent matrices for tasks that involve connectivity, tr
 
 - Only for **Directed Graphs**
 - Every **pair should be reachable** in a strongly connected component
+
+# Tarjan's Algorithm of time in and low time
+
+- We use Time in Array and a low time Array in order to know whether a node can traverse to another node via another path or not
+- For reference - Critical Connections in Network, Articulation Point in Graph
