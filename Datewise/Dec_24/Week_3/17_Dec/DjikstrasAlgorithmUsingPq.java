@@ -23,30 +23,18 @@ public class DjikstrasAlgorithmUsingPq {
     }
 
     public static void main(String[] args) {
-        int V = 6;
+        int V = 4;
         ArrayList<ArrayList<Pair>> adj = new ArrayList<>();
         for (int i = 0; i < V; i++) {
             adj.add(new ArrayList<>());
         }
-        adj.get(0).add(new Pair(1, 4));
-        adj.get(0).add(new Pair(2, 4));
-        adj.get(1).add(new Pair(0, 4));
-        adj.get(1).add(new Pair(2, 2));
-        adj.get(2).add(new Pair(0, 4));
-        adj.get(2).add(new Pair(1, 2));
-        adj.get(2).add(new Pair(3, 3));
-        adj.get(2).add(new Pair(4, 1));
-        adj.get(2).add(new Pair(5, 6));
-        adj.get(3).add(new Pair(2, 3));
-        adj.get(3).add(new Pair(5, 2));
-        adj.get(4).add(new Pair(2, 1));
-        adj.get(4).add(new Pair(5, 3));
-        adj.get(5).add(new Pair(2, 6));
-        adj.get(5).add(new Pair(3, 2));
-        adj.get(5).add(new Pair(4, 3));
+        adj.get(0).add(new Pair(1, 6));
+        adj.get(0).add(new Pair(2, 5));
+        adj.get(1).add(new Pair(2, -2));
+        adj.get(2).add(new Pair(3, 2));
 
         PriorityQueue<Pair> minHeap = new PriorityQueue<>((p1, p2) -> {
-            if (p1.a != p2.a) {
+            if (p1.b == p2.b) {
                 return Integer.compare(p1.a, p2.a);
             }
             return Integer.compare(p1.b, p2.b);
@@ -66,12 +54,16 @@ public class DjikstrasAlgorithmUsingPq {
     public static void bfs(PriorityQueue<Pair> q, ArrayList<ArrayList<Pair>> adj, int[] dist) {
         while (!q.isEmpty()) {
             Pair p = q.poll();
+            System.out.println("Parent: " + p.a + " " + p.b);
             for (Pair p2 : adj.get(p.a)) {
+                System.out.println("Child: " + p2.a + " " + p2.b);
                 if (dist[p2.a] > p.b + p2.b) {
                     dist[p2.a] = p.b + p2.b;
+                    System.out.println("Dist: " + dist[p2.a]);
                     q.add(new Pair(p2.a, p.b + p2.b));
                 }
             }
+            System.out.println();
         }
     }
 }
