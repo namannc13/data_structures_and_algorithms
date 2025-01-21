@@ -1,4 +1,3 @@
-package Topicwise.Greedy;
 
 // TC: O(N)
 // SC: O(1)

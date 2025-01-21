@@ -8,23 +8,23 @@ import java.util.Stack;
 
 public class KosarajuAlgorithm {
     public static void main(String[] args) {
-        int V = 7;
+        int V = 8;
         ArrayList<ArrayList<Integer>> adj = new ArrayList<>();
 
         for (int i = 0; i < V; i++) {
             adj.add(new ArrayList<>());
         }
 
-        adj.get(0).add(1);
-        adj.get(1).add(3);
-        adj.get(1).add(2);
-        adj.get(2).add(3);
-        adj.get(3).add(0);
         adj.get(4).add(5);
-        adj.get(4).add(0);
         adj.get(5).add(6);
         adj.get(6).add(4);
-        adj.get(6).add(1);
+        adj.get(6).add(3);
+        adj.get(3).add(0);
+        adj.get(0).add(1);
+        adj.get(0).add(7);
+        adj.get(1).add(2);
+        adj.get(2).add(0);
+        adj.get(2).add(7);
 
         Stack<Integer> ending = new Stack<>();
         int[] visited = new int[V];
