@@ -5,6 +5,6 @@
 
 # Types of Questions
 
-- Insert Interval ( need to keep track of intersections )
-- Count Max Intersections at a time
-- Erase Overlapping Intervals
+- Insert Interval ( need to keep track of intersections ) ( Insert Intervals )
+- Count Max Intersections at a time ( Minimum No. of Platforms required )
+- Count Overlapping Intervals / Count Non-Overlapping Intervals ( Non-Overlapping Intervals, N Meetings in a room )
