@@ -2,7 +2,7 @@
 import java.util.Arrays;
 
 public class Triangle {
-    // TC: O(2^n) ( It will only go down or down-right ) // SC: O(n)
+    // TC: O(2^n) ( It will only go down or down-right ) // SC: O(n) 
     private static int TriangleRecursion(int[][] grid, int currentRow, int currentCol) { 
         if (currentRow == grid.length - 1)
             return grid[currentRow][currentCol];
